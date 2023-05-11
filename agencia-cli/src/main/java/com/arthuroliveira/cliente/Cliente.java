@@ -6,9 +6,12 @@ public class Cliente {
     private String nome;
     
 
-    private Cliente(long id, String nome) {
+    public Cliente(long id, String nome) {
         this.id = id;
         this.nome = nome;
+    }
+
+    public Cliente(){
     }
 
     public static Cliente of(long id, String nome){
