@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-@RegisterRestClient(baseUri = "http://localhost:6060/Cliente")
+@RegisterRestClient(baseUri = "http://localhost:7070/Cliente")
 public interface ClienteService {
     
     @GET

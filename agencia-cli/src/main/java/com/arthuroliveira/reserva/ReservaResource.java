@@ -8,9 +8,6 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-import com.arthuroliveira.cliente.Cliente;
-import com.arthuroliveira.cliente.ClienteService;
-
 @Path("/reserva-cli")
 public class ReservaResource {
 
@@ -18,16 +15,11 @@ public class ReservaResource {
     @RestClient
     ReservaService reservaService;
 
-    @Inject
-    @RestClient
-    ClienteService clienteService;
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("newReserva")
     public String newReserva(){
-        Cliente cliente = clienteService.findById(2);
-        Reserva reserva = Reserva.of(cliente);
+        Reserva reserva = Reserva.of(0, 2);
 
         return reservaService.newReserva(reserva);
     }
