@@ -18,7 +18,7 @@ public interface ClienteService {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("findById")
     public Cliente findById(@QueryParam("id") long id);
-
+    
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
